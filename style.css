@@ -1,0 +1,307 @@
+:root {
+    --ink: #14181f;
+    --paper: #ede7dd;
+    --card: #f7f4ee;
+    --text: #232830;
+    --muted: #6b7280;
+    --rose: #c9748a;
+    --cyan: #5f9c96;
+    --line: #d8d1c3;
+
+    --font-display: "Fraunces", serif;
+    --font-mono: "Space Mono", monospace;
+    --font-body: "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    header, section {
+        animation: rise 0.6s ease both;
+    }
+    section:nth-of-type(2) { animation-delay: 0.05s; }
+    section:nth-of-type(3) { animation-delay: 0.1s; }
+    section:nth-of-type(4) { animation-delay: 0.15s; }
+}
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Header / Hero ===== */
+header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.eyebrow {
+    font-family: var(--font-mono);
+    color: var(--cyan);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* signature: a two-tone underline standing in for the two halves of her
+   practice — engineering (cyan) and design (rose) meeting at one name */
+header h1::after {
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 0.5rem auto 0;
+    width: 64%;
+    background: linear-gradient(90deg, var(--cyan) 0%, var(--cyan) 48%, var(--rose) 52%, var(--rose) 100%);
+    border-radius: 2px;
+}
+
+header .role {
+    font-family: var(--font-mono);
+    color: var(--rose);
+    margin: 0.9rem 0 2rem;
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+nav a {
+    color: var(--paper);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--rose);
+    border-color: var(--rose);
+    outline: none;
+}
+
+/* ===== Main sections ===== */
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem;
+}
+
+.num {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--rose);
+}
+
+/* ===== About ===== */
+.about-grid {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-grid img {
+    border-radius: 6px;
+    border: 2px solid var(--ink);
+    object-fit: cover;
+    height: 200px;
+}
+
+.about-grid p {
+    flex: 1;
+    min-width: 220px;
+    color: var(--text);
+}
+
+/* ===== Skills — terminal tag grid ===== */
+.skills-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-grid li {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--cyan);
+    padding: 0.6rem 0.8rem;
+    transition: transform 0.15s ease, border-left-color 0.15s ease;
+}
+
+.skills-grid li:hover {
+    transform: translateX(3px);
+    border-left-color: var(--rose);
+}
+
+.skills-grid li::before {
+    content: "$ ";
+    color: var(--rose);
+}
+
+/* ===== Projects — git-log style ===== */
+.project-log {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: proj;
+}
+
+.project-log li {
+    counter-increment: proj;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px dashed var(--line);
+    position: relative;
+    padding-left: 2.5rem;
+    transition: color 0.15s ease;
+}
+
+.project-log li:last-child {
+    border-bottom: none;
+}
+
+.project-log li::before {
+    content: counter(proj, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    color: var(--rose);
+}
+
+.project-log li:hover {
+    color: var(--cyan);
+}
+
+/* ===== Contact ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 460px;
+}
+
+label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.75rem;
+}
+
+input,
+textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--card);
+    color: var(--text);
+}
+
+input:focus,
+textarea:focus,
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: var(--rose);
+}
+
+button {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+    background: var(--rose);
+    color: var(--ink);
+    outline: none;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    header {
+        padding: 3rem 1.25rem 2.5rem;
+    }
+    .about-grid img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .about-grid {
+        justify-content: center;
+        text-align: center;
+    }
+}
