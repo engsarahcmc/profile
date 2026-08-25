@@ -3,19 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sara Alkanaan — Portfolio</title>
+<title>Sara Alkanaan — Creative Empire</title>
+<meta name="description" content="Sara Alkanaan — Information & Communications Engineer, artist, and founder of Sara Digital.">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body>
 
-<header>
-    <p class="eyebrow">ENGINEER &mdash; DESIGNER &mdash; MAKER</p>
-    <h1>Sara Alkanaan</h1>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="hero" id="top">
+    <div class="crest">
+        <img src="logo.png" alt="Sara Alkanaan — Creative Empire logo">
+    </div>
+
+    <p class="eyebrow">ENGINEER &middot; ARTIST &middot; FOUNDER, SARA DIGITAL</p>
+    <h1 class="hero-name">Sara Alkanaan</h1>
     <p class="role">Information &amp; Communications Engineer</p>
+
     <nav>
         <a href="#about">About</a>
+        <a href="#art">My Art</a>
+        <a href="#agency">Sara Digital</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -24,77 +37,205 @@
 
 <main>
 
-    <section id="about">
+    <section id="about" class="reveal">
         <h2><span class="num">01</span> About Me</h2>
         <div class="about-grid">
-            <img src="index.JPG" alt="Portrait of Sara Alkanaan" width="200">
-            <p>
-                I'm an Information &amp; Communications Engineer who thinks in two languages at once: the
-                precision of networks and code, and the intuition of color and form. Between security labs
-                and sketchbooks, I build things that are both rigorous and beautiful &mdash; and I'm always
-                chasing the next skill worth learning.
-            </p>
+            <div class="portrait-frame">
+                <img src="about.jpg" alt="Portrait of Sara Alkanaan" width="220" height="220">
+            </div>
+            <div class="about-copy">
+                <p class="lede">
+                    I live between two worlds<span class="dash">&mdash;</span>the discipline of
+                    engineering, and the intuition of art.
+                </p>
+                <p>
+                    I hold a degree in Information &amp; Communications Engineering, and for as long
+                    as I can remember I've been trying to find the balance between the two halves of
+                    who I am: the engineer who thinks in precision and structure, and the artist who
+                    thinks in color, texture, and form.
+                </p>
+                <p>
+                    Between security labs and sketchbooks, between client dashboards and hand-sewn
+                    pieces, I've learned that discipline and creativity aren't opposites &mdash; they
+                    sharpen each other. That balance is what I bring to every project I take on,
+                    whether it's technical or entirely handmade.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2><span class="num">02</span> Skills</h2>
-        <ul class="skills-grid">
-            <li>AutoCAD</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Cybersecurity</li>
-            <li>Microsoft Office</li>
-            <li>Kali Linux</li>
-            <li>Adobe Photoshop</li>
-            <li>Graphic Design</li>
-            <li>Canva</li>
-            <li>Digital Marketing</li>
-            <li>Social Media Mgmt</li>
-            <li>Photography</li>
-            <li>Drawing</li>
-            <li>Fashion Design</li>
-            <li>Accessories Design</li>
-            <li>Interior Design</li>
-        </ul>
+    <section id="art" class="reveal">
+        <h2><span class="num">02</span> My Art</h2>
+        <p class="section-lede">
+            Sara Alkanaan is a name that carries its own identity &mdash; the artist in me who
+            designs, sketches, and sews as naturally as she codes. This is where that side lives.
+        </p>
+        <div class="art-grid">
+            <div class="art-card">
+                <span class="art-icon" aria-hidden="true">&#10022;</span>
+                <h3>Design</h3>
+                <p>Visual identities, social content, and graphic work that give brands a distinct, memorable voice.</p>
+            </div>
+            <div class="art-card">
+                <span class="art-icon" aria-hidden="true">&#10022;</span>
+                <h3>Sewing</h3>
+                <p>Original fashion and accessory pieces, cut and stitched by hand &mdash; where structure meets wearable art.</p>
+            </div>
+            <div class="art-card">
+                <span class="art-icon" aria-hidden="true">&#10022;</span>
+                <h3>Drawing</h3>
+                <p>Sketches and illustrations that start every idea before it becomes anything else.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2><span class="num">03</span> Projects</h2>
+    <section id="agency" class="reveal">
+        <h2><span class="num">03</span> Sara Digital</h2>
+        <div class="agency-panel">
+            <p class="agency-kicker">MY AGENCY</p>
+            <p class="section-lede">
+                Alongside my personal work, I run <strong>Sara Digital</strong>, an agency offering
+                digital and technical solutions for businesses.
+            </p>
+            <ul class="agency-services">
+                <li>Web Hosting</li>
+                <li>Website Design &amp; Development</li>
+                <li>Business Email Setup</li>
+                <li>Photography &amp; UGC Advertising for Brands</li>
+            </ul>
+            <a class="agency-link" href="https://saradigital.iq" target="_blank" rel="noopener">saradigital.iq &rarr;</a>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2><span class="num">04</span> Skills</h2>
+        <div class="skills-columns">
+            <div class="skill-panel panel-tech">
+                <h3>Engineering &amp; Tech</h3>
+                <ul class="skills-grid">
+                    <li>AutoCAD</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Cybersecurity</li>
+                    <li>Kali Linux</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </div>
+            <div class="skill-panel panel-creative">
+                <h3>Creative &amp; Design</h3>
+                <ul class="skills-grid">
+                    <li>Adobe Photoshop</li>
+                    <li>Graphic Design</li>
+                    <li>Canva</li>
+                    <li>Digital Marketing</li>
+                    <li>Social Media Mgmt</li>
+                    <li>Photography</li>
+                    <li>Drawing</li>
+                    <li>Sewing</li>
+                    <li>Fashion Design</li>
+                    <li>Accessories Design</li>
+                    <li>Interior Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <h2><span class="num">05</span> Projects</h2>
+        <p class="section-note">More work samples coming soon.</p>
         <ol class="project-log">
-            <li>Personal Portfolio Website</li>
-            <li>Kali Linux Cybersecurity Practice Lab</li>
-            <li>Network Scanning &amp; Analysis (Nmap)</li>
-            <li>Graphic Design for Social Media</li>
-            <li>Brand Identity Design</li>
-            <li>Fashion &amp; Accessories Design Collection</li>
+            <li>
+                <span class="proj-index">01</span>
+                <div class="proj-body">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>This very site &mdash; designed and built from scratch, then shipped to GitHub Pages.</p>
+                </div>
+            </li>
+            <li>
+                <span class="proj-index">02</span>
+                <div class="proj-body">
+                    <h3>Kali Linux Cybersecurity Practice Lab</h3>
+                    <p>Hands-on penetration testing and security fundamentals in a sandboxed lab.</p>
+                </div>
+            </li>
+            <li>
+                <span class="proj-index">03</span>
+                <div class="proj-body">
+                    <h3>Network Scanning &amp; Analysis (Nmap)</h3>
+                    <p>Mapping live networks and auditing open ports for vulnerabilities.</p>
+                </div>
+            </li>
+            <li>
+                <span class="proj-index">04</span>
+                <div class="proj-body">
+                    <h3>Graphic Design for Social Media</h3>
+                    <p>Visual content and campaign assets designed for multiple platforms.</p>
+                </div>
+            </li>
+            <li>
+                <span class="proj-index">05</span>
+                <div class="proj-body">
+                    <h3>Brand Identity Design</h3>
+                    <p>Logos, color systems, and visual language built for emerging brands.</p>
+                </div>
+            </li>
+            <li>
+                <span class="proj-index">06</span>
+                <div class="proj-body">
+                    <h3>Fashion &amp; Accessories Design Collection</h3>
+                    <p>Original sketches and pieces blending structure with wearable art.</p>
+                </div>
+            </li>
         </ol>
     </section>
 
-    <section id="contact">
-        <h2><span class="num">04</span> Contact</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Sara Alkanaan">
+    <section id="contact" class="reveal">
+        <h2><span class="num">06</span> Contact</h2>
+        <p class="contact-lede">Have a project in mind &mdash; personal or for Sara Digital? I'd love to hear from you.</p>
+        <div class="contact-grid">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="sara@example.com">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
 
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXXX">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXXX">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about it..."></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
 </main>
 
 <footer>
-    &copy; 2026 Sara Alkanaan &mdash; built with care.
+    <a href="#top" class="back-to-top">&uarr; Back to top</a>
+    <p>&copy; 2026 Sara Alkanaan &mdash; Creative Empire.</p>
+    <p class="footer-agency">Sara Digital &middot; saradigital.iq</p>
 </footer>
+
+<script>
+    // Reveal sections as they scroll into view
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        reveals.forEach(function (el) { io.observe(el); });
+    } else {
+        reveals.forEach(function (el) { el.classList.add('in-view'); });
+    }
+</script>
 
 </body>
 </html>
